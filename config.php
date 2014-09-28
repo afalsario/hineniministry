@@ -1,6 +1,6 @@
 <?php
 
-$username = 'codeup';
-$password = 'Adelyn12';
+$username = 'ashley';
+$password = 'password';
 
 ?>
