@@ -1,11 +1,14 @@
 <?php
 session_start();
 $_SESSION = array();
+
+include('../config.php');
+
 class InvalidInputException extends Exception{}
 
 
 //-------------1. Establish DB Connection
-$dbc = new PDO('mysql:host=127.0.0.1;dbname=hineni_db', 'ashley', 'password');
+$dbc = new PDO('mysql:host=127.0.0.1;dbname=hineni_db', "$username", "$password");
 
 // Tell PDO to throw exceptions on error
 $dbc->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
